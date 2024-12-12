@@ -22,13 +22,20 @@ const soccer =[
     }
 ]
 
-let squadFoul = []
+let newSoccer = []
+
 
 for(let i = 0; i < soccer.length; i++){
     let soccerSquad = soccer[i]
     soccerSquad.point = getRndNumber(1,114)
-    soccerSquad.foul = getRndNumber(1,20)   
-    squadFoul.push(soccerSquad.squad, soccerSquad.foul)
+    soccerSquad.foul = getRndNumber(1,20) 
+    const newSoccerSquad= {
+        newSquad:"",
+        newFoul:"",
+    };
+    newSoccerSquad.newSquad = soccerSquad.squad
+    newSoccerSquad.newFoul = soccerSquad.foul
+    newSoccer.push(newSoccerSquad)
 }
 
-console.log(squadFoul)
+console.log(newSoccer)
